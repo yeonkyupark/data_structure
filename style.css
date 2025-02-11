@@ -1,3 +1,8 @@
+/*-- scss:defaults --*/
+$headings-font-weight:  bold !default;
+
+/*-- scss:rules --*/
+
 h2.anchored{
     padding-top: 12px;
     padding-left: 12px;
