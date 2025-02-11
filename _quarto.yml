@@ -1,0 +1,47 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "자료구조조"
+  author: "YK"
+  date: last-modified
+  repo-url: https://github.com/yeonkyupark/data_structure 
+  repo-branch: main
+  repo-actions: [edit]
+  favicon: logo.png
+  page-footer: 
+    left: "Copyright(c) 2025 YK" 
+    right: "Data struture"
+  sidebar: 
+    tools:
+      - icon: instagram
+        href: https://www.instagram.com/yeonkyu.park/
+      - icon: globe
+        href: https://yeonkyupark.github.io/
+    collapse-level: 1
+  chapters:
+    - index.qmd
+    - 10array.qmd
+
+bibliography: references.bib
+
+number-sections: false
+
+format:
+  html:
+    toc: true
+    toc-depth: 4
+    toc-title: 목차
+    page-layout: full
+    grid:
+      body-width: 900px
+    theme: 
+      - cosmo
+      - style.css
+    mermaid:
+      theme: neutral
+
+execute:
+  freeze: auto
+  
