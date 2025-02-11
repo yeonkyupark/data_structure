@@ -1,4 +1,5 @@
-.Rproj.user
+/.quarto
 .Rhistory
-.RData
-.Ruserdata
+/.Rproj.user
+/docs
+/site_libs
