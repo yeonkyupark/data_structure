@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 book:
-  title: "자료구조조"
+  title: "자료구조"
   author: "YK"
   date: last-modified
   repo-url: https://github.com/yeonkyupark/data_structure 
