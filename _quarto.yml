@@ -22,7 +22,7 @@ book:
     collapse-level: 1
   chapters:
     - index.qmd
-    - 10array.qmd
+    - 00datastructure.qmd
 
 bibliography: references.bib
 
