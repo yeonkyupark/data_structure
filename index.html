@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.39">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="YK">
-<meta name="dcterms.date" content="2025-02-12">
+<meta name="dcterms.date" content="2025-02-11">
 
-<title>자료구조조</title>
+<title>자료구조</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,10 +39,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9982c291f6497a8a2df1e62c6d78eb46.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a59947b428196cdf8fee8d0e9fbfad06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">자료구조란 무엇인가?</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">들어가기</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -98,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">자료구조조</a> 
+      <a href="./">자료구조</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://www.instagram.com/yeonkyu.park/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-instagram"></i></a>
     <a href="https://yeonkyupark.github.io/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-globe"></i></a>
@@ -115,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">자료구조란 무엇인가?</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">들어가기</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -133,7 +133,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#자료구조란-무엇인가" id="toc-자료구조란-무엇인가" class="nav-link active" data-scroll-target="#자료구조란-무엇인가">자료구조란 무엇인가?</a></li>
+  <li><a href="#들어가기" id="toc-들어가기" class="nav-link active" data-scroll-target="#들어가기">들어가기</a>
+  <ul>
+  <li><a href="#자료구조란-무엇인가" id="toc-자료구조란-무엇인가" class="nav-link" data-scroll-target="#자료구조란-무엇인가">자료구조란 무엇인가?</a></li>
   <li><a href="#배열-array" id="toc-배열-array" class="nav-link" data-scroll-target="#배열-array">배열 (Array)</a></li>
   <li><a href="#연결-리스트-linked-list" id="toc-연결-리스트-linked-list" class="nav-link" data-scroll-target="#연결-리스트-linked-list">연결 리스트 (Linked List)</a></li>
   <li><a href="#스택-stack" id="toc-스택-stack" class="nav-link" data-scroll-target="#스택-stack">스택 (Stack)</a></li>
@@ -143,6 +145,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#자료구조-비교-및-선택-기준" id="toc-자료구조-비교-및-선택-기준" class="nav-link" data-scroll-target="#자료구조-비교-및-선택-기준">자료구조 비교 및 선택 기준</a></li>
   <li><a href="#자료구조-실전-문제" id="toc-자료구조-실전-문제" class="nav-link" data-scroll-target="#자료구조-실전-문제">9. 자료구조 실전 문제</a></li>
   <li><a href="#부록" id="toc-부록" class="nav-link" data-scroll-target="#부록">10. 부록</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/yeonkyupark/data_structure/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
@@ -151,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">자료구조조</h1>
+<h1 class="title">자료구조</h1>
 </div>
 
 
@@ -168,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 12, 2025</p>
+      <p class="date">February 11, 2025</p>
     </div>
   </div>
   
@@ -180,6 +183,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="들어가기" class="level1">
+<h1>들어가기</h1>
 <section id="자료구조란-무엇인가" class="level2">
 <h2 class="anchored" data-anchor-id="자료구조란-무엇인가">자료구조란 무엇인가?</h2>
 <ul>
@@ -367,6 +372,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

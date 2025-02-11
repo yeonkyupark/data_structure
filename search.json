@@ -2,111 +2,111 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "자료구조조",
+    "title": "자료구조",
     "section": "",
-    "text": "자료구조란 무엇인가?",
+    "text": "들어가기",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>자료구조란 무엇인가?</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>들어가기</span>"
     ]
   },
   {
     "objectID": "index.html#자료구조란-무엇인가",
     "href": "index.html#자료구조란-무엇인가",
-    "title": "자료구조조",
-    "section": "",
-    "text": "자료구조의 정의와 중요성\n자료구조와 알고리즘의 관계\n자료구조 선택의 기준",
+    "title": "자료구조",
+    "section": "자료구조란 무엇인가?",
+    "text": "자료구조란 무엇인가?\n\n자료구조의 정의와 중요성\n자료구조와 알고리즘의 관계\n자료구조 선택의 기준",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>자료구조란 무엇인가?</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>들어가기</span>"
     ]
   },
   {
     "objectID": "index.html#배열-array",
     "href": "index.html#배열-array",
-    "title": "자료구조조",
+    "title": "자료구조",
     "section": "배열 (Array)",
     "text": "배열 (Array)\n\n배열의 개념과 구조\n배열의 특징\n\n고정 크기\n인덱스를 통한 접근\n\n배열의 종류\n\n1차원 배열\n2차원 배열\n다차원 배열\n\n배열의 기본 연산\n\n삽입\n삭제\n검색\n수정\n\n배열의 장단점\n배열 사용 예제",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>자료구조란 무엇인가?</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>들어가기</span>"
     ]
   },
   {
     "objectID": "index.html#연결-리스트-linked-list",
     "href": "index.html#연결-리스트-linked-list",
-    "title": "자료구조조",
+    "title": "자료구조",
     "section": "연결 리스트 (Linked List)",
     "text": "연결 리스트 (Linked List)\n\n연결 리스트의 개념과 구조\n연결 리스트의 종류\n\n단일 연결 리스트\n이중 연결 리스트\n환형 연결 리스트\n\n연결 리스트의 기본 연산\n\n삽입\n삭제\n검색\n\n배열과 연결 리스트의 비교\n연결 리스트 사용 예제",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>자료구조란 무엇인가?</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>들어가기</span>"
     ]
   },
   {
     "objectID": "index.html#스택-stack",
     "href": "index.html#스택-stack",
-    "title": "자료구조조",
+    "title": "자료구조",
     "section": "스택 (Stack)",
     "text": "스택 (Stack)\n\n스택의 개념과 구조\nLIFO(Last In First Out) 원리\n스택의 기본 연산\n\npush (삽입)\npop (삭제)\npeek (조회)\n\n스택의 활용 사례\n\n괄호 검사\n함수 호출 관리 (콜 스택)\n\n배열과 연결 리스트로 구현하는 스택\n스택 사용 예제",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>자료구조란 무엇인가?</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>들어가기</span>"
     ]
   },
   {
     "objectID": "index.html#큐-queue",
     "href": "index.html#큐-queue",
-    "title": "자료구조조",
+    "title": "자료구조",
     "section": "큐 (Queue)",
     "text": "큐 (Queue)\n\n큐의 개념과 구조\nFIFO(First In First Out) 원리\n큐의 종류\n\n일반 큐\n원형 큐\n덱(Deque, 양방향 큐)\n우선순위 큐\n\n큐의 기본 연산\n\nenqueue (삽입)\ndequeue (삭제)\npeek (조회)\n\n큐의 활용 사례\n\n프로세스 스케줄링\n데이터 스트림 처리\n\n배열과 연결 리스트로 구현하는 큐\n큐 사용 예제",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>자료구조란 무엇인가?</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>들어가기</span>"
     ]
   },
   {
     "objectID": "index.html#트리-tree",
     "href": "index.html#트리-tree",
-    "title": "자료구조조",
+    "title": "자료구조",
     "section": "트리 (Tree)",
     "text": "트리 (Tree)\n\n트리의 개념과 구조\n트리의 기본 용어\n\n노드, 루트, 리프, 부모/자식 노드, 서브트리\n\n이진 트리와 이진 탐색 트리\n트리 순회 방법\n\n전위 순회\n중위 순회\n후위 순회\n\n균형 트리 (AVL 트리, 레드-블랙 트리)\n힙(Heap)과 힙 정렬\n트리의 활용 사례\n\n폴더 구조\n데이터베이스 인덱싱\n\n트리 사용 예제",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>자료구조란 무엇인가?</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>들어가기</span>"
     ]
   },
   {
     "objectID": "index.html#그래프-graph",
     "href": "index.html#그래프-graph",
-    "title": "자료구조조",
+    "title": "자료구조",
     "section": "그래프 (Graph)",
     "text": "그래프 (Graph)\n\n그래프의 개념과 구조\n그래프의 기본 용어\n\n정점(Vertex), 간선(Edge)\n방향 그래프와 무방향 그래프\n가중치 그래프\n\n그래프 표현 방법\n\n인접 행렬\n인접 리스트\n\n그래프 탐색 알고리즘\n\n깊이 우선 탐색(DFS)\n너비 우선 탐색(BFS)\n\n최소 신장 트리 (MST)\n\n크루스칼 알고리즘\n프림 알고리즘\n\n최단 경로 알고리즘\n\n다익스트라 알고리즘\n플로이드-워셜 알고리즘\n\n그래프의 활용 사례\n\n네트워크 경로 찾기\n소셜 네트워크 분석\n\n그래프 사용 예제",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>자료구조란 무엇인가?</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>들어가기</span>"
     ]
   },
   {
     "objectID": "index.html#자료구조-비교-및-선택-기준",
     "href": "index.html#자료구조-비교-및-선택-기준",
-    "title": "자료구조조",
+    "title": "자료구조",
     "section": "자료구조 비교 및 선택 기준",
     "text": "자료구조 비교 및 선택 기준\n\n상황별 자료구조 선택 가이드\n시간 복잡도와 공간 복잡도 비교",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>자료구조란 무엇인가?</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>들어가기</span>"
     ]
   },
   {
     "objectID": "index.html#자료구조-실전-문제",
     "href": "index.html#자료구조-실전-문제",
-    "title": "자료구조조",
+    "title": "자료구조",
     "section": "9. 자료구조 실전 문제",
     "text": "9. 자료구조 실전 문제\n\n기본 개념 복습 문제\n단계별 실습 문제\n응용 및 심화 문제",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>자료구조란 무엇인가?</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>들어가기</span>"
     ]
   },
   {
     "objectID": "index.html#부록",
     "href": "index.html#부록",
-    "title": "자료구조조",
+    "title": "자료구조",
     "section": "10. 부록",
     "text": "10. 부록\n\n빅오 표기법(Big-O Notation) 설명\n참고할 만한 추가 자료 및 학습 사이트",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>자료구조란 무엇인가?</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>들어가기</span>"
     ]
   },
   {
