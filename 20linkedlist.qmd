@@ -230,7 +230,7 @@ sll.display()  # 출력: 5 → 10 → 20 → 30 → None
 **예제 (단일 연결 리스트에서 삭제)**  
 
 ```{python}
-""""
+"""
 def delete(self, key):
     current = self.head
 
@@ -248,7 +248,7 @@ def delete(self, key):
         return  # 삭제할 값이 없는 경우
 
     prev.next = current.next  # 노드 삭제
-""""
+"""
 # 사용 예제
 sll.delete(20)
 sll.display()  # 출력: 5 → 10 → 30 → None
