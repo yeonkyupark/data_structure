@@ -255,7 +255,7 @@ graph = {
 }
 
 # 사용 예제
-dfs(graph, 'A')  # 출력: A C F B E D
+dfs(graph, 'A')
 ```
 
 ---
