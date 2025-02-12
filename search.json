@@ -288,5 +288,85 @@
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>연결 리스트 (Linked List)</span>"
     ]
+  },
+  {
+    "objectID": "30stack.html",
+    "href": "30stack.html",
+    "title": "스택(Stack)",
+    "section": "",
+    "text": "스택의 개념과 구조\n스택(Stack)은 데이터를 쌓는 형태로 저장하는 자료구조로, LIFO(Last In First Out) 원칙을 따른다. 즉, 가장 나중에 추가된 데이터가 가장 먼저 제거되는 구조이다. 스택은 한쪽 끝에서만 데이터의 삽입과 삭제가 이루어지며, 이 끝 부분을 Top(탑)이라고 한다.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>스택(Stack)</span>"
+    ]
+  },
+  {
+    "objectID": "30stack.html#스택의-개념과-구조",
+    "href": "30stack.html#스택의-개념과-구조",
+    "title": "스택(Stack)",
+    "section": "",
+    "text": "스택",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>스택(Stack)</span>"
+    ]
+  },
+  {
+    "objectID": "30stack.html#lifo-last-in-first-out-원리",
+    "href": "30stack.html#lifo-last-in-first-out-원리",
+    "title": "스택(Stack)",
+    "section": "LIFO (Last In First Out) 원리",
+    "text": "LIFO (Last In First Out) 원리\nLIFO란 마지막에 들어간 데이터가 가장 먼저 나온다는 의미다.\n실생활 예시 : - 접시 쌓기: 가장 나중에 올린 접시를 먼저 꺼내는 방식 - 책 더미: 가장 위에 놓인 책을 먼저 꺼내 읽는 방식",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>스택(Stack)</span>"
+    ]
+  },
+  {
+    "objectID": "30stack.html#스택의-기본-연산",
+    "href": "30stack.html#스택의-기본-연산",
+    "title": "스택(Stack)",
+    "section": "스택의 기본 연산",
+    "text": "스택의 기본 연산\n\npush (삽입)\n\n\n스택의 Top에 새로운 데이터를 추가하는 연산이다.\n\n\npop (삭제)\n\n\n스택의 Top에 있는 데이터를 제거하고 반환하는 연산이다. 만약 스택이 비어있다면 오류를 발생시킬 수 있다.\n\n\npeek (조회)\n\n\n스택의 Top에 있는 데이터를 제거하지 않고 확인하는 연산이다.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>스택(Stack)</span>"
+    ]
+  },
+  {
+    "objectID": "30stack.html#스택의-파이썬-구현",
+    "href": "30stack.html#스택의-파이썬-구현",
+    "title": "스택(Stack)",
+    "section": "스택의 파이썬 구현",
+    "text": "스택의 파이썬 구현\n\n1. 리스트(List)를 이용한 스택 구현\n파이썬의 리스트 자료형을 사용하면 쉽게 스택을 구현할 수 있다.\n\nclass Stack:\n    def __init__(self):\n        self.stack = []\n\n    def push(self, data):\n        self.stack.append(data)\n\n    def pop(self):\n        if self.is_empty():\n            return \"스택이 비어있습니다.\"\n        return self.stack.pop()\n\n    def peek(self):\n        if self.is_empty():\n            return \"스택이 비어있습니다.\"\n        return self.stack[-1]\n\n    def is_empty(self):\n        return len(self.stack) == 0\n\n    def size(self):\n        return len(self.stack)\n\n# 사용 예제\ns = Stack()\ns.push(10)\ns.push(20)\ns.push(30)\nprint(s.peek())  # 출력: 30\nprint(s.pop())   # 출력: 30\nprint(s.pop())   # 출력: 20\nprint(s.peek())  # 출력: 10\n\n30\n30\n20\n10",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>스택(Stack)</span>"
+    ]
+  },
+  {
+    "objectID": "30stack.html#스택의-활용-사례",
+    "href": "30stack.html#스택의-활용-사례",
+    "title": "스택(Stack)",
+    "section": "스택의 활용 사례",
+    "text": "스택의 활용 사례\n\n괄호 검사 (문법 체크)\n스택은 프로그래밍 언어의 괄호 짝 맞추기와 같은 문제 해결에 유용하게 사용된다. 여는 괄호를 만나면 스택에 넣고, 닫는 괄호를 만나면 스택에서 꺼내어 짝이 맞는지 검사한다.\n파이썬 예제 코드\n\ndef is_balanced(expression):\n    stack = Stack()\n    for char in expression:\n        if char in \"({[\":\n            stack.push(char)\n        elif char in \")}]\":\n            if stack.is_empty():\n                return False\n            top = stack.pop()\n            if not ((top == '(' and char == ')') or\n                    (top == '{' and char == '}') or\n                    (top == '[' and char == ']')):\n                return False\n    return stack.is_empty()\n\n# 사용 예제\nexpr1 = \"(a + b) * (c + d)\"\nexpr2 = \"(a + b * (c - d)\"\nprint(is_balanced(expr1))  # 출력: True\nprint(is_balanced(expr2))  # 출력: False\n\nTrue\nFalse\n\n\n\n\n\n함수 호출 관리 (콜 스택)\n프로그래밍 언어에서 함수 호출 시 호출된 함수와 복귀 위치를 관리하기 위해 콜 스택(Call Stack)을 사용한다.\n예제 설명\n재귀 함수 호출 시, 스택을 통해 호출된 함수가 쌓이고, 가장 마지막 함수부터 실행이 완료된 후 차례로 이전 함수로 돌아간다.\n\ndef factorial(n):\n    if n == 1:\n        return 1\n    return n * factorial(n - 1)\n\n# 사용 예제\nprint(factorial(5))  # 출력: 120\n\n120\n\n\n\n호출 스택 흐름\nfactorial(5)\nfactorial(4)\nfactorial(3)\nfactorial(2)\nfactorial(1) → 반환 시작",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>스택(Stack)</span>"
+    ]
+  },
+  {
+    "objectID": "30stack.html#배열과-연결-리스트로-구현하는-스택",
+    "href": "30stack.html#배열과-연결-리스트로-구현하는-스택",
+    "title": "스택(Stack)",
+    "section": "배열과 연결 리스트로 구현하는 스택",
+    "text": "배열과 연결 리스트로 구현하는 스택\n\n\n\n\n\n\n\n\n구현 방법\n배열 (List)\n연결 리스트\n\n\n\n\n메모리 구조\n연속적인 메모리 공간\n비연속적인 메모리 공간\n\n\n삽입/삭제 속도\n리스트의 끝에서 삽입/삭제 시 O(1) 성능 유지\n항상 O(1) 성능 유지\n\n\n메모리 효율성\n크기 조정이 필요할 때 리사이징으로 메모리 낭비 발생 가능\n필요한 만큼 동적으로 메모리 할당\n\n\n구현 복잡도\n간단한 구현\n포인터 관리로 인해 복잡도가 높음\n\n\n\n\n\n배열 기반 스택\n\n\n리스트 기반으로 앞서 구현한 스택과 동일하다.\n\n\n연결 리스트 기반 스택\n\n\n연결 리스트의 Head 부분을 스택의 Top으로 사용하여 구현할 수 있다.\n\n\n\n\nclass Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n\nclass LinkedListStack:\n    def __init__(self):\n        self.head = None\n\n    def push(self, data):\n        new_node = Node(data)\n        new_node.next = self.head\n        self.head = new_node\n\n    def pop(self):\n        if self.is_empty():\n            return \"스택이 비어있습니다.\"\n        data = self.head.data\n        self.head = self.head.next\n        return data\n\n    def peek(self):\n        if self.is_empty():\n            return \"스택이 비어있습니다.\"\n        return self.head.data\n\n    def is_empty(self):\n        return self.head is None\n\n# 사용 예제\nll_stack = LinkedListStack()\nll_stack.push(100)\nll_stack.push(200)\nprint(ll_stack.peek())  # 출력: 200\nprint(ll_stack.pop())   # 출력: 200\nprint(ll_stack.pop())   # 출력: 100\n\n200\n200\n100",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>스택(Stack)</span>"
+    ]
+  },
+  {
+    "objectID": "30stack.html#스택-사용-예제",
+    "href": "30stack.html#스택-사용-예제",
+    "title": "스택(Stack)",
+    "section": "스택 사용 예제",
+    "text": "스택 사용 예제\n\n문자열 뒤집기\n스택의 LIFO 특성을 이용하여 문자열을 뒤집는 작업을 수행할 수 있다.\n\ndef reverse_string(s):\n    stack = Stack()\n    for char in s:\n        stack.push(char)\n    \n    reversed_str = \"\"\n    while not stack.is_empty():\n        reversed_str += stack.pop()\n    \n    return reversed_str\n\n# 사용 예제\noriginal = \"hello\"\nprint(reverse_string(original))  # 출력: olleh\n\nolleh\n\n\n\n\n\nDFS(깊이 우선 탐색) 구현\n그래프 탐색 알고리즘 중 하나인 DFS(Depth-First Search)는 스택을 활용하여 구현할 수 있다.\n\ndef dfs(graph, start):\n    visited = set()\n    stack = Stack()\n    stack.push(start)\n    \n    while not stack.is_empty():\n        vertex = stack.pop()\n        if vertex not in visited:\n            print(vertex, end=' ')\n            visited.add(vertex)\n            for neighbor in reversed(graph[vertex]):  # 인접 노드 스택에 삽입\n                stack.push(neighbor)\n\n# 그래프 인접 리스트 표현\ngraph = {\n    'A': ['B', 'C'],\n    'B': ['D', 'E'],\n    'C': ['F'],\n    'D': [],\n    'E': ['F'],\n    'F': []\n}\n\n# 사용 예제\ndfs(graph, 'A')  # 출력: A C F B E D\n\nA B D E F C \n\n\n\n이처럼 스택은 간단하지만 매우 강력한 자료구조로, 다양한 알고리즘과 문제 해결에 활용된다. 특히 재귀적 문제 해결, 문법 검사, 그래프 탐색 등에서 필수적으로 사용된다.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>스택(Stack)</span>"
+    ]
   }
 ]
