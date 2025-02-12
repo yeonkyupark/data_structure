@@ -39,11 +39,13 @@ class SinglyLinkedList:
     def __init__(self):
         self.head = None  # 첫 번째 노드(헤드)
 
+    # insert node _____________________________________________
     def insert_at_beginning(self, data):
         new_node = Node(data)
         new_node.next = self.head  # 새 노드가 기존 첫 노드를 가리킴
         self.head = new_node       # 헤드를 새 노드로 변경
-    
+
+    # delete node _____________________________________________
     def delete(self, key):
         current = self.head
     
@@ -61,6 +63,17 @@ class SinglyLinkedList:
             return  # 삭제할 값이 없는 경우
     
         prev.next = current.next  # 노드 삭제
+
+    # search node _____________________________________________
+    def search(self, key):
+        current = self.head
+        while current:
+            if current.data == key:
+                return True
+            current = current.next
+        return False
+
+    # append node _____________________________________________
     def append(self, data):
         new_node = Node(data)
         if not self.head:
@@ -71,6 +84,7 @@ class SinglyLinkedList:
             current = current.next  # 마지막 노드 찾기
         current.next = new_node  # 새 노드 연결
 
+    # display node _____________________________________________
     def display(self):
         current = self.head
         while current:
