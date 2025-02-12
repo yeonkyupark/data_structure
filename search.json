@@ -314,7 +314,7 @@
     "href": "30stack.html#lifo-last-in-first-out-원리",
     "title": "스택(Stack)",
     "section": "LIFO (Last In First Out) 원리",
-    "text": "LIFO (Last In First Out) 원리\nLIFO란 마지막에 들어간 데이터가 가장 먼저 나온다는 의미다.\n실생활 예시 : - 접시 쌓기: 가장 나중에 올린 접시를 먼저 꺼내는 방식 - 책 더미: 가장 위에 놓인 책을 먼저 꺼내 읽는 방식",
+    "text": "LIFO (Last In First Out) 원리\nLIFO란 마지막에 들어간 데이터가 가장 먼저 나온다는 의미다.\n\n실생활 예시\n\n\n접시 쌓기: 가장 나중에 올린 접시를 먼저 꺼내는 방식\n책 더미: 가장 위에 놓인 책을 먼저 꺼내 읽는 방식",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>스택(Stack)</span>"
     ]
@@ -324,7 +324,7 @@
     "href": "30stack.html#스택의-기본-연산",
     "title": "스택(Stack)",
     "section": "스택의 기본 연산",
-    "text": "스택의 기본 연산\n\npush (삽입)\n\n\n스택의 Top에 새로운 데이터를 추가하는 연산이다.\n\n\npop (삭제)\n\n\n스택의 Top에 있는 데이터를 제거하고 반환하는 연산이다. 만약 스택이 비어있다면 오류를 발생시킬 수 있다.\n\n\npeek (조회)\n\n\n스택의 Top에 있는 데이터를 제거하지 않고 확인하는 연산이다.",
+    "text": "스택의 기본 연산\n\npush (삽입)\n\n\n스택의 Top에 새로운 데이터를 추가하는 연산\n\n\npop (삭제)\n\n\n스택의 Top에 있는 데이터를 제거하고 반환하는 연산, 만약 스택이 비어있다면 오류를 발생\n\n\npeek (조회)\n\n\n스택의 Top에 있는 데이터를 제거하지 않고 확인하는 연산",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>스택(Stack)</span>"
     ]
@@ -334,7 +334,7 @@
     "href": "30stack.html#스택의-파이썬-구현",
     "title": "스택(Stack)",
     "section": "스택의 파이썬 구현",
-    "text": "스택의 파이썬 구현\n\n1. 리스트(List)를 이용한 스택 구현\n파이썬의 리스트 자료형을 사용하면 쉽게 스택을 구현할 수 있다.\n\nclass Stack:\n    def __init__(self):\n        self.stack = []\n\n    def push(self, data):\n        self.stack.append(data)\n\n    def pop(self):\n        if self.is_empty():\n            return \"스택이 비어있습니다.\"\n        return self.stack.pop()\n\n    def peek(self):\n        if self.is_empty():\n            return \"스택이 비어있습니다.\"\n        return self.stack[-1]\n\n    def is_empty(self):\n        return len(self.stack) == 0\n\n    def size(self):\n        return len(self.stack)\n\n# 사용 예제\ns = Stack()\ns.push(10)\ns.push(20)\ns.push(30)\nprint(s.peek())  # 출력: 30\nprint(s.pop())   # 출력: 30\nprint(s.pop())   # 출력: 20\nprint(s.peek())  # 출력: 10\n\n30\n30\n20\n10",
+    "text": "스택의 파이썬 구현\n\n리스트(List)를 이용한 스택 구현\n파이썬의 리스트 자료형을 사용하면 쉽게 스택을 구현할 수 있다.\n\nclass Stack:\n    def __init__(self):\n        self.stack = []\n\n    def push(self, data):\n        self.stack.append(data)\n\n    def pop(self):\n        if self.is_empty():\n            return \"스택이 비어있습니다.\"\n        return self.stack.pop()\n\n    def peek(self):\n        if self.is_empty():\n            return \"스택이 비어있습니다.\"\n        return self.stack[-1]\n\n    def is_empty(self):\n        return len(self.stack) == 0\n\n    def size(self):\n        return len(self.stack)\n\n# 사용 예제\ns = Stack()\ns.push(10)\ns.push(20)\ns.push(30)\nprint(s.peek())  # 출력: 30\nprint(s.pop())   # 출력: 30\nprint(s.pop())   # 출력: 20\nprint(s.peek())  # 출력: 10\n\n30\n30\n20\n10",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>스택(Stack)</span>"
     ]
