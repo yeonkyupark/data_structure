@@ -220,6 +220,16 @@ print(reverse_string(original))  # 출력: olleh
 
 그래프 탐색 알고리즘 중 하나인 **DFS(Depth-First Search)**는 스택을 활용하여 구현할 수 있다.
 
+```{mermaid}
+graph TD
+    A --> B
+    A --> C
+    B --> E
+    B --> D
+    C --> F
+    E --> F
+```
+
 ```{python}
 def dfs(graph, start):
     visited = set()
