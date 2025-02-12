@@ -228,5 +228,65 @@
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>배열</span>"
     ]
+  },
+  {
+    "objectID": "20linkedlist.html",
+    "href": "20linkedlist.html",
+    "title": "연결 리스트 (Linked List)",
+    "section": "",
+    "text": "연결 리스트의 개념과 구조\n연결 리스트(Linked List)는 데이터를 노드(Node)라는 단위로 저장하고, 각 노드가 다음 노드의 주소(참조)를 저장하는 자료구조이다. 배열과 달리 연결 리스트는 메모리 상에서 연속적이지 않은 위치에 데이터를 저장하며, 필요에 따라 크기를 동적으로 확장하거나 축소할 수 있다.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>연결 리스트 (Linked List)</span>"
+    ]
+  },
+  {
+    "objectID": "20linkedlist.html#연결-리스트의-개념과-구조",
+    "href": "20linkedlist.html#연결-리스트의-개념과-구조",
+    "title": "연결 리스트 (Linked List)",
+    "section": "",
+    "text": "연결 리스트의 구조\n\n\n\n연결 리스트\n\n\n\n노드(Node): 데이터와 다음 노드에 대한 참조(포인터)로 구성된다.\n\n데이터(data): 저장되는 실제 값\n포인터(next): 다음 노드를 가리키는 참조\n\n헤드(Head): 연결 리스트의 첫 번째 노드를 가리키는 포인터\n테일(Tail): 리스트의 마지막 노드로, 다음 노드가 없는 상태 (일반적으로 None으로 표시)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>연결 리스트 (Linked List)</span>"
+    ]
+  },
+  {
+    "objectID": "20linkedlist.html#연결-리스트의-종류",
+    "href": "20linkedlist.html#연결-리스트의-종류",
+    "title": "연결 리스트 (Linked List)",
+    "section": "연결 리스트의 종류",
+    "text": "연결 리스트의 종류\n\n단일 연결 리스트 (Singly Linked List)\n각 노드가 다음 노드에 대한 참조만을 가지는 가장 기본적인 형태의 연결 리스트이다.\n\n특징\n\n\n한 방향으로만 순회 가능\n마지막 노드의 next는 None을 가리킴\n\n\n\n\n# 단일 연결 리스트 구현\n\nclass Node:\n    def __init__(self, data):\n        self.data = data  # 데이터 저장\n        self.next = None  # 다음 노드 초기화\n\nclass SinglyLinkedList:\n    def __init__(self):\n        self.head = None  # 첫 번째 노드(헤드)\n\n    # insert node _____________________________________________\n    def insert_at_beginning(self, data):\n        new_node = Node(data)\n        new_node.next = self.head  # 새 노드가 기존 첫 노드를 가리킴\n        self.head = new_node       # 헤드를 새 노드로 변경\n\n    # delete node _____________________________________________\n    def delete(self, key):\n        current = self.head\n    \n        # 첫 노드가 삭제 대상인 경우\n        if current and current.data == key:\n            self.head = current.next\n            return\n    \n        prev = None\n        while current and current.data != key:\n            prev = current\n            current = current.next\n    \n        if current is None:\n            return  # 삭제할 값이 없는 경우\n    \n        prev.next = current.next  # 노드 삭제\n\n    # search node _____________________________________________\n    def search(self, key):\n        current = self.head\n        while current:\n            if current.data == key:\n                return True\n            current = current.next\n        return False\n\n    # append node _____________________________________________\n    def append(self, data):\n        new_node = Node(data)\n        if not self.head:\n            self.head = new_node  # 리스트가 비어있으면 첫 노드로 설정\n            return\n        current = self.head\n        while current.next:\n            current = current.next  # 마지막 노드 찾기\n        current.next = new_node  # 새 노드 연결\n\n    # display node _____________________________________________\n    def display(self):\n        current = self.head\n        while current:\n            print(current.data, end=' → ')\n            current = current.next\n        print('None')\n\n# 사용 예제\nsll = SinglyLinkedList()\nsll.append(10)\nsll.append(20)\nsll.append(30)\nsll.display()  # 출력: 10 → 20 → 30 → None\n\n10 → 20 → 30 → None\n\n\n\n\n\n이중 연결 리스트 (Doubly Linked List)\n\n\n\n이중 연결 리스트\n\n\n각 노드가 이전 노드(prev)와 다음 노드(next)에 대한 참조를 모두 가지는 연결 리스트이다.\n\n특징\n\n\n앞뒤로 순회 가능\n삽입/삭제 시 더 유연하게 동작\n\n\n\n\n# 이중 연결 리스트 구현\n\nclass DNode:\n    def __init__(self, data):\n        self.data = data\n        self.prev = None  # 이전 노드 참조\n        self.next = None  # 다음 노드 참조\n\nclass DoublyLinkedList:\n    def __init__(self):\n        self.head = None\n\n    def append(self, data):\n        new_node = DNode(data)\n        if not self.head:\n            self.head = new_node\n            return\n        current = self.head\n        while current.next:\n            current = current.next\n        current.next = new_node\n        new_node.prev = current  # 이전 노드 설정\n\n    def display(self):\n        current = self.head\n        while current:\n            print(current.data, end=' ↔ ')\n            current = current.next\n        print('None')\n\n# 사용 예제\ndll = DoublyLinkedList()\ndll.append(10)\ndll.append(20)\ndll.append(30)\ndll.display()  # 출력: 10 ↔ 20 ↔ 30 ↔ None\n\n10 ↔ 20 ↔ 30 ↔ None\n\n\n\n\n\n환형 연결 리스트 (Circular Linked List)\n\n\n\n환형 연결 리스트\n\n\n리스트의 마지막 노드가 처음 노드(헤드)를 가리키는 형태로, 원형 구조를 이룬다.\n\n특징\n\n\n순환 구조로 인해 리스트의 끝이 없음\n특정 상황에서 무한 루프 방지 필요\n\n\n\n\n# 환형 연결 리스트 구현\n\nclass CNode:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n\nclass CircularLinkedList:\n    def __init__(self):\n        self.head = None\n\n    def append(self, data):\n        new_node = CNode(data)\n        if not self.head:\n            self.head = new_node\n            self.head.next = self.head  # 자기 자신을 가리킴\n            return\n        current = self.head\n        while current.next != self.head:\n            current = current.next\n        current.next = new_node\n        new_node.next = self.head  # 새 노드가 다시 헤드를 가리킴\n\n    def display(self):\n        if not self.head:\n            return\n        current = self.head\n        while True:\n            print(current.data, end=' → ')\n            current = current.next\n            if current == self.head:\n                break\n        print('(다시 시작)')\n\n# 사용 예제\ncll = CircularLinkedList()\ncll.append(10)\ncll.append(20)\ncll.append(30)\ncll.display()  # 출력: 10 → 20 → 30 → (다시 시작)\n\n10 → 20 → 30 → (다시 시작)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>연결 리스트 (Linked List)</span>"
+    ]
+  },
+  {
+    "objectID": "20linkedlist.html#연결-리스트의-기본-연산",
+    "href": "20linkedlist.html#연결-리스트의-기본-연산",
+    "title": "연결 리스트 (Linked List)",
+    "section": "연결 리스트의 기본 연산",
+    "text": "연결 리스트의 기본 연산\n\n삽입 (Insert)\n특정 위치에 새로운 노드를 추가하는 작업이다.\n\n단일 연결 리스트에서 삽입\n\n\"\"\"\nin SinglyLinkedList\ndef insert_at_beginning(self, data):\n    new_node = Node(data)\n    new_node.next = self.head  # 새 노드가 기존 첫 노드를 가리킴\n    self.head = new_node       # 헤드를 새 노드로 변경\n\"\"\"\n# 사용 예제\nsll.insert_at_beginning(5)\nsll.display()  # 출력: 5 → 10 → 20 → 30 → None\n\n5 → 10 → 20 → 30 → None\n\n\n\n\n\n삭제 (Delete)\n특정 노드를 삭제하는 작업이다.\n\n예제 (단일 연결 리스트에서 삭제)\n\n\"\"\"\ndef delete(self, key):\n    current = self.head\n\n    # 첫 노드가 삭제 대상인 경우\n    if current and current.data == key:\n        self.head = current.next\n        return\n\n    prev = None\n    while current and current.data != key:\n        prev = current\n        current = current.next\n\n    if current is None:\n        return  # 삭제할 값이 없는 경우\n\n    prev.next = current.next  # 노드 삭제\n\"\"\"\n# 사용 예제\nsll.delete(20)\nsll.display()  # 출력: 5 → 10 → 30 → None\n\n5 → 10 → 30 → None\n\n\n\n\n\n검색 (Search)\n리스트에서 특정 값을 찾는 작업이다.\n예제 (단일 연결 리스트에서 검색)\n\n\"\"\"\ndef search(self, key):\n    current = self.head\n    while current:\n        if current.data == key:\n            return True\n        current = current.next\n    return False\n\"\"\"\n\n# 사용 예제\nprint(sll.search(30))  # 출력: True\nprint(sll.search(50))  # 출력: False\n\nTrue\nFalse",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>연결 리스트 (Linked List)</span>"
+    ]
+  },
+  {
+    "objectID": "20linkedlist.html#배열과-연결-리스트의-비교",
+    "href": "20linkedlist.html#배열과-연결-리스트의-비교",
+    "title": "연결 리스트 (Linked List)",
+    "section": "배열과 연결 리스트의 비교",
+    "text": "배열과 연결 리스트의 비교\n\n\n\n\n\n\n\n\n구분\n배열 (Array)\n연결 리스트 (Linked List)\n\n\n\n\n메모리 구조\n연속적인 메모리 공간\n비연속적인 메모리 공간\n\n\n크기\n고정 크기\n동적 크기 조정 가능\n\n\n접근 속도\n인덱스를 통한 빠른 접근 (O(1))\n순차 접근 필요 (O(n))\n\n\n삽입/삭제\n중간 삽입/삭제 시 데이터 이동 필요 (O(n))\n포인터 변경만으로 삽입/삭제 가능 (O(1) ~ O(n))\n\n\n메모리 사용\n고정된 크기로 인해 메모리 낭비 가능\n필요한 만큼만 메모리 사용",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>연결 리스트 (Linked List)</span>"
+    ]
+  },
+  {
+    "objectID": "20linkedlist.html#연결-리스트-사용-예제",
+    "href": "20linkedlist.html#연결-리스트-사용-예제",
+    "title": "연결 리스트 (Linked List)",
+    "section": "연결 리스트 사용 예제",
+    "text": "연결 리스트 사용 예제\n\n예제 1: 히스토리 기능 구현 (이중 연결 리스트)\n웹 브라우저의 ‘뒤로 가기’ 및 ‘앞으로 가기’ 기능을 이중 연결 리스트로 구현할 수 있다.\n예제 코드\n\n# 간단한 웹 브라우저 히스토리 기능\ndll.append('페이지1')\ndll.append('페이지2')\ndll.append('페이지3')\n\ncurrent = dll.head.next  # '페이지2' 위치\n\n# 뒤로 가기\nif current.prev:\n    current = current.prev\n    print(f'뒤로 가기: {current.data}')  # 출력: 페이지1\n\n# 앞으로 가기\nif current.next:\n    current = current.next\n    print(f'앞으로 가기: {current.data}')  # 출력: 페이지2\n\n뒤로 가기: 10\n앞으로 가기: 20\n\n\n\n\n예제 2: 순환 작업 (환형 연결 리스트)\n게임에서 플레이어의 턴을 순환적으로 처리하는 시스템에 활용 가능하다.\n예제 코드\n\n# 게임 플레이어 턴 관리\ncll.append('플레이어1')\ncll.append('플레이어2')\ncll.append('플레이어3')\n\ncurrent = cll.head\nfor _ in range(5):  # 5번 턴 진행\n    print(f'{current.data}의 턴입니다.')\n    current = current.next\n\n10의 턴입니다.\n20의 턴입니다.\n30의 턴입니다.\n플레이어1의 턴입니다.\n플레이어2의 턴입니다.\n\n\n이러한 예제들은 연결 리스트의 유연성과 다양한 활용 가능성을 보여준다. 적절한 연결 리스트의 종류를 선택하면 문제 해결에 큰 도움이 된다.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>연결 리스트 (Linked List)</span>"
+    ]
   }
 ]
