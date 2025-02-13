@@ -23,6 +23,9 @@ book:
   chapters:
     - index.qmd
     - 00datastructure.qmd
+    - 10array.qmd
+    - 20linkedlist.qmd
+    - 30stack.qmd
 
 bibliography: references.bib
 
